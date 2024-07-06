@@ -14,8 +14,8 @@
 [[ "$UID" != "0" ]] && echo "This script must be run as root" && exit 1
 
 # needs to match the location and value in dgamelaunch.conf obviously
-DGL_CONF_HOME=/home/crawl-dev/dgamelaunch-config/
-DGL_CHROOT=/home/crawl/DGL
+DGL_CONF_HOME=/var/local/crawl-dev/dgamelaunch-config/
+DGL_CHROOT=/var/local/crawl/DGL
 LANG=en_US.UTF-8
 
 CRAWL_USER=$(id -u crawl)

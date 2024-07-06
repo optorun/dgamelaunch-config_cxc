@@ -7,7 +7,7 @@ use MIME::Base64;
 
 use DBI;
 
-my $DGL = "/home/crawl-dev/dgamelaunch-config/bin/dgl";
+my $DGL = "/var/local/crawl-dev/dgamelaunch-config/bin/dgl";
 my $DB = "%%LOGIN_DB%%";
 my $CONTENT_DIR = '%%SAVE_DUMPDIR%%/';
 
@@ -151,10 +151,12 @@ sub main() {
   my $ver = param('v');
 
   if (not $ver) {
-    do_prompt 'trunk', '0.25';
+    do_prompt 'trunk', '0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31';
   } elsif ($ver eq 'trunk') {
     do_update 'trunk';
-  } elsif ($ver =~ /^0.2[5]$/) {
+  } elsif ($ver =~ /^0.2[56789]$/) {
+    do_update 'stable', $ver;
+  } elsif ($ver =~ /^0.3[01]$/) {
     do_update 'stable', $ver;
   } else {
     do_fail "Unknown version " . escapeHTML($ver);

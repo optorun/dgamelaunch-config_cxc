@@ -1,12 +1,12 @@
 #!/bin/bash
 if [ "$1" = '--provision-chroot' ]; then
-    /home/crawl-dev/dgamelaunch-config/utils/provision-chroot.sh
+    /var/local/crawl-dev/dgamelaunch-config/utils/provision-chroot.sh
     exit $?
 fi
 
-if [ -d "/home/crawl/DGL/proc/" ]; then
-    mount --bind /proc/ /home/crawl/DGL/proc/
-    mount --bind /dev/pts/ /home/crawl/DGL/dev/pts/
+if [ -d "/var/local/crawl/DGL/proc/" ]; then
+    mount --bind /proc/ /var/local/crawl/DGL/proc/
+    mount --bind /dev/pts/ /var/local/crawl/DGL/dev/pts/
     /etc/init.d/ssh start
     /etc/init.d/webtiles start
 else

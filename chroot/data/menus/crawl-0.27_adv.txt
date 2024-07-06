@@ -7,20 +7,16 @@ Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 
 Logged in as: $USERNAME
-W) Watch games in progress
 
-T) DCSS Trunk
-1) DCSS 0.31
-0) DCSS 0.30
-9) DCSS 0.29
-8) DCSS 0.28
-7) DCSS 0.27
-6) DCSS 0.26
-5) DCSS 0.25
+Game selected: Dungeon Crawl Stone Soup 0.27
 
+B)ackup your save-game (for bug reports and debugging)
 
-c) Change password  e) Change email address
+The next option allows you to reset your options.
+ALL CHANGES YOU'VE MADE TO YOUR OPTIONS WILL BE LOST.
 
-Q)uit or P)lay or S)print in Crawl Trunk now
+O) Reset options
+
+q) Return to previous menu
 
 =>

@@ -7,20 +7,17 @@ Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 
 Logged in as: $USERNAME
-W) Watch games in progress
 
-T) DCSS Trunk
-1) DCSS 0.31
-0) DCSS 0.30
-9) DCSS 0.29
-8) DCSS 0.28
-7) DCSS 0.27
-6) DCSS 0.26
-5) DCSS 0.25
+Game selected: Dungeon Crawl Stone Soup 0.31
 
+P)lay Crawl    S)print    T)utorial
 
-c) Change password  e) Change email address
+o) Edit options    O) with Virus
+m) Edit macros     M) with Virus
+v) View changelog  V) with Virus
 
-Q)uit or P)lay or S)print in Crawl Trunk now
+A)dvanced options
+
+q) Return to main menu
 
 =>

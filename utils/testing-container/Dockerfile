@@ -7,7 +7,7 @@ FROM ubuntu:22.04
 
 COPY utils/testing-container/healthcheck.sh /
 
-ENV DGL_CHROOT=/home/crawl/DGL
+ENV DGL_CHROOT=/var/local/crawl/DGL
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TERM=dumb
 
@@ -40,7 +40,7 @@ RUN pip3 install tornado \
 # permissions may be too open for a production server.
 COPY utils/testing-container/dgl_sudoers /etc/sudoers.d/
 
-WORKDIR /home/crawl-dev
+WORKDIR /var/local/crawl-dev
 
 # set up dgamelaunch
 
@@ -73,14 +73,14 @@ RUN cd dgamelaunch \
 # note that after this point, changing any file in the copied material will
 # invalidate the build cache (annoying!). For that reason, we manually select
 # everything but utils to copy at this point.
-COPY --chown=crawl-dev:crawl-dev ./bin /home/crawl-dev/dgamelaunch-config/bin/
-COPY --chown=crawl-dev:crawl-dev ./chroot /home/crawl-dev/dgamelaunch-config/chroot/
-COPY --chown=crawl-dev:crawl-dev ./crawl-build /home/crawl-dev/dgamelaunch-config/crawl-build/
-COPY --chown=crawl-dev:crawl-dev ./help /home/crawl-dev/dgamelaunch-config/help/
-COPY --chown=crawl-dev:crawl-dev ./lib /home/crawl-dev/dgamelaunch-config/lib/
-COPY --chown=crawl-dev:crawl-dev ./games.d /home/crawl-dev/dgamelaunch-config/games.d/
-COPY --chown=crawl-dev:crawl-dev ./config.py ./crawl-git.conf ./dgamelaunch.conf ./dgl-manage.conf sh-utils /home/crawl-dev/dgamelaunch-config/
-COPY --chown=crawl-dev:crawl-dev ./utils/webtiles ./utils/trigger-rebuild.pl ./utils/auth-save-downloader.pl /home/crawl-dev/dgamelaunch-config/utils/
+COPY --chown=crawl-dev:crawl-dev ./bin /var/local/crawl-dev/dgamelaunch-config/bin/
+COPY --chown=crawl-dev:crawl-dev ./chroot /var/local/crawl-dev/dgamelaunch-config/chroot/
+COPY --chown=crawl-dev:crawl-dev ./crawl-build /var/local/crawl-dev/dgamelaunch-config/crawl-build/
+COPY --chown=crawl-dev:crawl-dev ./help /var/local/crawl-dev/dgamelaunch-config/help/
+COPY --chown=crawl-dev:crawl-dev ./lib /var/local/crawl-dev/dgamelaunch-config/lib/
+COPY --chown=crawl-dev:crawl-dev ./games.d /var/local/crawl-dev/dgamelaunch-config/games.d/
+COPY --chown=crawl-dev:crawl-dev ./config.py ./crawl-git.conf ./dgamelaunch.conf ./dgl-manage.conf sh-utils /var/local/crawl-dev/dgamelaunch-config/
+COPY --chown=crawl-dev:crawl-dev ./utils/webtiles ./utils/trigger-rebuild.pl ./utils/auth-save-downloader.pl /var/local/crawl-dev/dgamelaunch-config/utils/
 
 RUN ls dgamelaunch-config/bin -al && sed -i -e 's/"127.0.0.1"/"0.0.0.0"/' dgamelaunch-config/config.py \
     && dgamelaunch-config/bin/dgl create-versions-db \
@@ -105,7 +105,7 @@ COPY utils/testing-container/docker-entrypoint.sh /
 
 # finally copy in utils, which will be often invalidated while working on the
 # docker setup itself.
-COPY utils/* /home/crawl-dev/dgamelaunch-config/utils/
+COPY utils/* /var/local/crawl-dev/dgamelaunch-config/utils/
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh

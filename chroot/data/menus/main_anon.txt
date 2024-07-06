@@ -1,6 +1,6 @@
-Crawl server (SERVER_REGION) hosted and maintained by SERVER_ADMIN.
+Crawl server (France) hosted and maintained by melvinkitnick.
 ------------------------------------------------------------------------------
-Webtiles:           SERVER_URL
+Webtiles:           https://crawl.xtahua.com/
 Crawl information:  http://crawl.develz.org/
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
@@ -15,4 +15,4 @@ L) Login
 
 Q) Quit
 
-=> 
+=>
