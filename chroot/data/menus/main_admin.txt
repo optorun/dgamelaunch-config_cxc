@@ -11,6 +11,7 @@ Logged in as: $USERNAME (admin)
 W) Watch games in progress
 
 T) DCSS Trunk
+2) DCSS 0.32
 1) DCSS 0.31
 0) DCSS 0.30
 9) DCSS 0.29
@@ -24,4 +25,4 @@ c) Change password  e) Change email address
 
 Q)uit or P)lay or S)print in Crawl Trunk now
 
-=>
+=> 
