@@ -76,6 +76,45 @@ games = OrderedDict([
         socket_path = "%%CHROOT_WEBDIR%%/sockets",
         options = ["-tutorial"])),
 
+    ("dcss-0.33", dict(
+        name = "DCSS 0.33",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "0.33" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-33/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+    ("spr-0.33", dict(
+        name = "Sprint 0.33",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "0.33" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-33-sprint/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets",
+        options = ["-sprint"])),
+    ("tut-0.33", dict(
+        name = "Tutorial 0.33",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "0.33" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-0.33/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-33-tut/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets",
+        options = ["-tutorial"])),
+
     ("dcss-0.32", dict(
         name = "DCSS 0.32",
         crawl_binary = "/bin/crawl-stable-launcher.sh",
@@ -393,6 +432,9 @@ dgl_status_file = "%%CHROOT_WEBDIR%%/run/status"
 
 # Set to None not to read milestones
 milestone_file = [
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.33/saves/milestones",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.33/saves/milestones-tutorial",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.33/saves/milestones-sprint",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.32/saves/milestones",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.32/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-0.32/saves/milestones-sprint",
