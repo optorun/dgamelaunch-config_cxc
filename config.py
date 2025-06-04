@@ -426,6 +426,45 @@ games = OrderedDict([
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets",
         options = ["-tutorial"])),
+
+    ("bcadrencrawl", dict(
+        name = "BcadrenCrawl",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "bcadrencrawl" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-bcadrencrawl/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-bcadrencrawl/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-bcadrencrawl/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+
+    ("bcrawl", dict(
+        name = "BCrawl",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "bcrawl" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-bcrawl/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-bcrawl/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-bcrawl/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+
+    ("stoatsoup", dict(
+        name = "Stoat Soup",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "stoatsoup" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-stoatsoup/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-stoatsoup/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-stoatsoup/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
 ])
 
 dgl_status_file = "%%CHROOT_WEBDIR%%/run/status"
@@ -466,6 +505,10 @@ milestone_file = [
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-bcadren/saves/milestones",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-bcadren/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-bcadren/saves/milestones-sprint",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-tutorial",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-sprint",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-adventure",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-sprint"
