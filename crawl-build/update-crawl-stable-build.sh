@@ -17,7 +17,7 @@ source $DGL_CONF_HOME/crawl-git.conf
 GAME=crawl-$VERSION
 
 export DESTDIR=$CRAWL_BASEDIR
-BRANCH=stone_soup-$VERSION
+BRANCH=origin/stone_soup-$VERSION
 if [[ $VERSION != [0-9]* ]]; then
     BRANCH=$VERSION
 fi
