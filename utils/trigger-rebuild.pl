@@ -151,12 +151,12 @@ sub main() {
   my $ver = param('v');
 
   if (not $ver) {
-    do_prompt 'trunk', '0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31', '0.32', '0.33', 'bcadrencrawl', 'bcrawl', 'stoatsoup';
+    do_prompt 'trunk', '0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31', '0.32', '0.33', '0.34', 'bcadrencrawl', 'bcrawl', 'stoatsoup';
   } elsif ($ver eq 'trunk') {
     do_update 'trunk';
   } elsif ($ver =~ /^0.2[56789]$/) {
     do_update 'stable', $ver;
-  } elsif ($ver =~ /^0.3[0123]$/) {
+  } elsif ($ver =~ /^0.3[01234]$/) {
     do_update 'stable', $ver;
   } elsif ($ver eq 'bcadrencrawl') {
     do_update 'gcc', 'bcadrencrawl crawl-forks/bcadrencrawl/bugfix';

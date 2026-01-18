@@ -2,32 +2,22 @@ Crawl server (France) hosted and maintained by melvinkitnick.
 ------------------------------------------------------------------------------
 Webtiles:           https://crawl.xtahua.com/
 Crawl information:  http://crawl.develz.org/
-Rebuild:            SERVER_REBUILD_URL
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
 
-Logged in as: $USERNAME (admin)
-W) Watch games in progress
+Logged in as: $USERNAME
 
-T) DCSS Trunk
-4) DCSS 0.34
-3) DCSS 0.33
-2) DCSS 0.32
-1) DCSS 0.31
-0) DCSS 0.30
-9) DCSS 0.29
-8) DCSS 0.28
-7) DCSS 0.27
-6) DCSS 0.26
-5) DCSS 0.25
-K) BcadrenCrawl
-B) BCrawl
-U) Stoat Soup
+Game selected: Dungeon Crawl Stone Soup 0.34
 
+P)lay Crawl    S)print    T)utorial
 
-c) Change password  e) Change email address
+o) Edit options    O) with Virus
+m) Edit macros     M) with Virus
+v) View changelog  V) with Virus
 
-Q)uit or P)lay or S)print in Crawl Trunk now
+A)dvanced options
+
+q) Return to main menu
 
 =>
