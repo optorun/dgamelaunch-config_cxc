@@ -151,7 +151,7 @@ sub main() {
   my $ver = param('v');
 
   if (not $ver) {
-    do_prompt 'trunk', '0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31', '0.32', '0.33', '0.34', 'bcadrencrawl', 'bcrawl', 'stoatsoup';
+    do_prompt 'trunk', '0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31', '0.32', '0.33', '0.34', 'bcadrencrawl', 'bcrawl', 'stoatsoup', 'chili';
   } elsif ($ver eq 'trunk') {
     do_update 'trunk';
   } elsif ($ver =~ /^0.2[56789]$/) {
@@ -164,6 +164,8 @@ sub main() {
     do_update 'gcc', 'bcrawl bcrawl/master';
   } elsif ($ver eq 'stoatsoup') {
     do_update 'gcc', 'stoatsoup stoatsoup/master';
+  } elsif ($ver eq 'chili') {
+    do_update 'gcc', 'chili chili/master';
   } else {
     do_fail "Unknown version " . escapeHTML($ver);
   }

@@ -24,6 +24,7 @@ T) DCSS Trunk
 K) BcadrenCrawl
 B) BCrawl
 U) Stoat Soup
+C) Chili
 
 
 c) Change password  e) Change email address

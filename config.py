@@ -504,6 +504,19 @@ games = OrderedDict([
         inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-stoatsoup/",
         ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
         socket_path = "%%CHROOT_WEBDIR%%/sockets")),
+
+    ("chili", dict(
+        name = "chili",
+        crawl_binary = "/bin/crawl-stable-launcher.sh",
+        send_json_options = True,
+        pre_options  = [ "chili" ],
+        rcfile_path = "%%CHROOT_RCFILESDIR%%/crawl-chili/",
+        macro_path = "%%CHROOT_RCFILESDIR%%/crawl-chili/",
+        morgue_path = "%%CHROOT_MORGUEDIR%%/%n/",
+        morgue_url = "%%CHROOT_MORGUE_URL%%/%n/",
+        inprogress_path = "%%CHROOT_INPROGRESSDIR%%/crawl-chili/",
+        ttyrec_path = "%%CHROOT_TTYRECDIR%%/%n/",
+        socket_path = "%%CHROOT_WEBDIR%%/sockets")),
 ])
 
 dgl_status_file = "%%CHROOT_WEBDIR%%/run/status"
@@ -551,6 +564,9 @@ milestone_file = [
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-sprint",
     "%%CHROOT_CRAWL_BASEDIR%%/crawl-stoatsoup/saves/milestones-adventure",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-chili/saves/milestones",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-chili/saves/milestones-tutorial",
+    "%%CHROOT_CRAWL_BASEDIR%%/crawl-chili/saves/milestones-sprint",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-tutorial",
     "%%CHROOT_CRAWL_GAMEDIR%%/saves/milestones-sprint"

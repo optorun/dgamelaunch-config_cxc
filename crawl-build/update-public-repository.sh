@@ -18,6 +18,7 @@ clone-crawl-ref() {
     say "BcadrenCrawl" && git --git-dir="./$CRAWL_REPOSITORY_DIR/.git" remote add bcadrencrawl https://github.com/Bcadren/crawl.git
     say "BCrawl" && git --git-dir="./$CRAWL_REPOSITORY_DIR/.git" remote add bcrawl https://github.com/b-crawl/bcrawl.git
     say "Stoat Soup" && git --git-dir="./$CRAWL_REPOSITORY_DIR/.git" remote add stoatsoup https://github.com/damerell/crawl.git
+    say "Chili" && git --git-dir="./$CRAWL_REPOSITORY_DIR/.git" remote add chili https://github.com/DungeonCrawl-org/DungeonCrawlChili.git
     say "Update branches for all forks"
     git --git-dir="./$CRAWL_REPOSITORY_DIR/.git" fetch --all
 }
