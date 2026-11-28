@@ -85,8 +85,8 @@ create-dgl-directories() {
 }
 
 fix-chroot-directory-permissions() {
-	find $CHROOT/crawl-master/ -maxdepth 1 -type d -iname 'crawl-git-*' -ctime 0 -exec chown -R crawl:crawl {} + # TEMP (unversioned) fix for timeouts / segfaults because of the large quantity of files
-	find $CHROOT/dgldir/ \( -path '*/data/*' -o -name '*.db*' \) -mtime 0 -exec chown crawl:crawl {} + # TEMP (unversioned) fix for timeouts / segfaults because of the large quantity of files
+    find $CHROOT/crawl-master/ -maxdepth 1 -type d -iname "$GAME" -exec chown -R crawl:crawl {} +
+    find $CHROOT/dgldir/ \( -name '*.db*' -o -path "*/data/$GAME-settings" -o -path "*/inprogress/crawl-${VERSION//0./}*" -o -path "*/rcfiles/$GAME" \) -exec chown -R crawl:crawl {} +
 }
 
 install-game() {
@@ -97,7 +97,7 @@ install-game() {
 	fix-chroot-directory-permissions
     copy-game-binary
     copy-data-files
-    
+
     chown -R $CRAWL_UGRP $SAVEDIR
 }
 
